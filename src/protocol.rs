@@ -3,7 +3,7 @@
 #![deny(missing_docs)]
 
 use aes_gcm::aead::generic_array::GenericArray;
-use aes_gcm::aead::{AeadInPlace, NewAead};
+use aes_gcm::aead::{AeadInPlace, KeyInit};
 use aes_gcm::Aes128Gcm;
 use bytes::{Buf, BufMut, Bytes, BytesMut};
 use hkdf::Hkdf;

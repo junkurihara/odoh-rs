@@ -11,7 +11,7 @@ categories = ["network-programming", "cryptography"]
 include = ["/src", "/examples", "README.md", "LICENSE"]
 
 [dependencies]
-aes-gcm = { version = "0.9.4", features = [ "std" ] }
+aes-gcm = { version = "0.10.1", features = [ "std" ] }
 bytes = "1.2.1"
 hkdf = "0.12.3"
 hpke = { git = "https://github.com/junkurihara/rust-hpke.git", features = [ "std", "x25519" ], default-features = false }
