@@ -1,6 +1,6 @@
 [package]
 name = "odoh-rs"
-version = "1.0.0-alpha.1"
+version = "1.0.0-beta.2"
 authors = ["Tanya Verma <tverma@cloudflare.com>"]
 edition = "2021"
 license = "BSD-2-Clause"
@@ -8,29 +8,31 @@ description = "Rust implementation of the Oblivious DNS over HTTPS (ODoH) protoc
 repository = "https://github.com/cloudflare/odoh-rs/"
 keywords = ["odoh", "protocols", "dns", "doh", "privacy"]
 categories = ["network-programming", "cryptography"]
+include = ["/src", "/examples", "README.md", "LICENSE"]
 
 [dependencies]
 aes-gcm = { version = "0.9.4", features = [ "std" ] }
-bytes = "1.1.0"
+bytes = "1.2.1"
 hkdf = "0.12.3"
 hpke = { git = "https://github.com/junkurihara/rust-hpke.git", features = [ "std", "x25519" ], default-features = false }
 rand = { version = "0.8.5", features = [ "std_rng" ], default-features = false }
-thiserror = "1.0.31"
+thiserror = "1.0.34"
 
 [dev-dependencies]
-anyhow = "1.0.57"
-clap = { version = "3.1.17", features = ["derive"] }
-criterion = "0.3.5"
+anyhow = "1.0.64"
+clap = { version = "3.2.20", features = ["derive"] }
+criterion = "0.3.6"
 domain = "0.6.1"
 env_logger = "0.9.0"
 hex = "0.4.3"
 log = "0.4.17"
 rand = "0.8.5"
-reqwest = "0.11.10"
-serde = { version = "1.0.137", features = ["derive"] }
-serde_json = "1.0.81"
-tokio = { version = "1.18.2", features = [ "full" ] }
+reqwest = "0.11.11"
+serde = { version = "1.0.144", features = ["derive"] }
+serde_json = "1.0.85"
+tokio = { version = "1.21.0", features = [ "full" ] }
 
 [[bench]]
 name = "odoh_bench"
+path = "benches/odoh_bench.rs"
 harness = false
